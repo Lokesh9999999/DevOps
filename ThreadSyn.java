@@ -1,33 +1,116 @@
-class Counter {
-    int count = 0;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Security Dashboard</title>
 
-    synchronized void increment() {
-        count++;
-    }
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #1e293b;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background: #38bdf8;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0284c7;
+        }
+
+        ul {
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🔐 DevOps Security Dashboard</h1>
+    <p>Aqua (Trivy) | Clair | Snyk</p>
+</header>
+
+<section class="cards">
+
+    <div class="card">
+        <h2>🛡 Trivy (Aqua)</h2>
+        <p>Container vulnerability scanner</p>
+        <button onclick="showData('trivy')">View Report</button>
+        <div id="trivy"></div>
+    </div>
+
+    <div class="card">
+        <h2>🔍 Snyk</h2>
+        <p>Dependency vulnerability scanner</p>
+        <button onclick="showData('snyk')">View Report</button>
+        <div id="snyk"></div>
+    </div>
+
+    <div class="card">
+        <h2>⚙ Clair</h2>
+        <p>Static container analysis</p>
+        <button onclick="showData('clair')">View Report</button>
+        <div id="clair"></div>
+    </div>
+
+</section>
+
+<script>
+function showData(tool) {
+    let data = {
+        trivy: [
+            "CVE-1234 - HIGH",
+            "CVE-5678 - MEDIUM",
+            "CVE-9999 - CRITICAL"
+        ],
+        snyk: [
+            "VULN-2222 - CRITICAL",
+            "VULN-3333 - LOW",
+            "VULN-4444 - HIGH"
+        ],
+        clair: [
+            "BUG-9999 - HIGH",
+            "BUG-8888 - MEDIUM",
+            "BUG-7777 - LOW"
+        ]
+    };
+
+    let output = "<ul>";
+    data[tool].forEach(v => {
+        output += "<li>" + v + "</li>";
+    });
+    output += "</ul>";
+
+    document.getElementById(tool).innerHTML = output;
 }
+</script>
 
-public class ThreadSyn {
-    public static void main(String[] args) throws Exception {
-        Counter c = new Counter();
-
-        Thread t1 = new Thread(() -> {
-            for (int i = 0; i < 1000; i++) {
-                c.increment();
-            }
-        });
-
-        Thread t2 = new Thread(() -> {
-            for (int i = 0; i < 1000; i++) {
-                c.increment();
-            }
-        });
-
-        t1.start();
-        t2.start();
-
-        t1.join();
-        t2.join();
-
-        System.out.println("Count: " + c.count);
-    }
-} 
+</body>
+</html>
