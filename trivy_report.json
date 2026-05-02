@@ -1,0 +1,31 @@
+{
+    "tool": "Trivy",
+    "image": "nginx:latest",
+    "vulnerabilities": [
+        {
+            "id": "TRIVY-VULN-8526",
+            "severity": "CRITICAL",
+            "description": "Sample vulnerability detected by trivy"
+        },
+        {
+            "id": "TRIVY-VULN-4801",
+            "severity": "MEDIUM",
+            "description": "Sample vulnerability detected by trivy"
+        },
+        {
+            "id": "TRIVY-VULN-4377",
+            "severity": "CRITICAL",
+            "description": "Sample vulnerability detected by trivy"
+        },
+        {
+            "id": "TRIVY-VULN-5666",
+            "severity": "HIGH",
+            "description": "Sample vulnerability detected by trivy"
+        },
+        {
+            "id": "TRIVY-VULN-2362",
+            "severity": "MEDIUM",
+            "description": "Sample vulnerability detected by trivy"
+        }
+    ]
+}

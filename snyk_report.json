@@ -1,0 +1,31 @@
+{
+    "tool": "Snyk",
+    "project": "Demo Project",
+    "vulnerabilities": [
+        {
+            "id": "SNYK-VULN-4841",
+            "severity": "HIGH",
+            "description": "Sample vulnerability detected by snyk"
+        },
+        {
+            "id": "SNYK-VULN-5390",
+            "severity": "MEDIUM",
+            "description": "Sample vulnerability detected by snyk"
+        },
+        {
+            "id": "SNYK-VULN-5006",
+            "severity": "CRITICAL",
+            "description": "Sample vulnerability detected by snyk"
+        },
+        {
+            "id": "SNYK-VULN-1786",
+            "severity": "LOW",
+            "description": "Sample vulnerability detected by snyk"
+        },
+        {
+            "id": "SNYK-VULN-1613",
+            "severity": "LOW",
+            "description": "Sample vulnerability detected by snyk"
+        }
+    ]
+}

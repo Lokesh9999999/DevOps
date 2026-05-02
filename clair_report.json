@@ -1,0 +1,31 @@
+{
+    "tool": "Clair",
+    "image": "nginx:latest",
+    "vulnerabilities": [
+        {
+            "id": "CLAIR-VULN-7242",
+            "severity": "CRITICAL",
+            "description": "Sample vulnerability detected by clair"
+        },
+        {
+            "id": "CLAIR-VULN-1675",
+            "severity": "CRITICAL",
+            "description": "Sample vulnerability detected by clair"
+        },
+        {
+            "id": "CLAIR-VULN-3252",
+            "severity": "LOW",
+            "description": "Sample vulnerability detected by clair"
+        },
+        {
+            "id": "CLAIR-VULN-8596",
+            "severity": "LOW",
+            "description": "Sample vulnerability detected by clair"
+        },
+        {
+            "id": "CLAIR-VULN-4888",
+            "severity": "LOW",
+            "description": "Sample vulnerability detected by clair"
+        }
+    ]
+}
